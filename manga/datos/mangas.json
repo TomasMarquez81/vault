@@ -1,0 +1,49 @@
+{
+  "mangas": [
+    {
+      "titleText" : "Zelda",
+      "cover" : "https://assets.codepen.io/527512/zelda_cover-image.webp",
+      "title":"https://assets.codepen.io/527512/zelda_title.webp",
+      "character": "https://assets.codepen.io/527512/zelda_character.webp",
+      "tomos": [
+        {
+          "portada": "url_portada_tomo_1_manga_1",
+          "titulo": "Título del Tomo 1",
+          "resumen": "Resumen del contenido del tomo 1 del Manga 1"
+        },
+        {
+          "portada": "url_portada_tomo_2_manga_1",
+          "titulo": "Título del Tomo 2",
+          "resumen": "Resumen del contenido del tomo 2 del Manga 1"
+        }         
+      ]      
+    },
+    {
+      "cover" : "https://assets.codepen.io/527512/zelda_cover-image.webp",
+      "title":"https://assets.codepen.io/527512/zelda_title.webp",
+      "character": "https://assets.codepen.io/527512/zelda_character.webp",
+      "tomos": [
+        {
+          "portada": "url_portada_tomo_1_manga_1",
+          "titulo": "libro serie 2 - 1",
+          "resumen": "Resumen del contenido del tomo 1 del Manga 1"
+        },
+        {
+          "portada": "url_portada_tomo_2_manga_1",
+          "titulo": "libro serie 2 - 2",
+          "resumen": "Resumen del contenido del tomo 2 del Manga 1"
+        }         
+      ]
+    },
+    {
+      "cover" : "https://assets.codepen.io/527512/zelda_cover-image.webp",
+      "title":"https://assets.codepen.io/527512/zelda_title.webp",
+      "character": "https://assets.codepen.io/527512/zelda_character.webp"      
+    },
+    {
+      "cover" : "https://assets.codepen.io/527512/zelda_cover-image.webp",
+      "title":"https://assets.codepen.io/527512/zelda_title.webp",
+      "character": "https://assets.codepen.io/527512/zelda_character.webp"      
+    }
+  ]
+}

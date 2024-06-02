@@ -1,0 +1,40 @@
+{
+  "mangas": [
+    {
+      "portada": "url_portada_manga_1",
+      "titulo": "Manga 1",
+      "autor": "Autor del Manga 1",
+      "sinopsis": "Breve descripción del Manga 1",
+      "tomos": [
+        {
+          "portada": "url_portada_tomo_1_manga_1",
+          "titulo": "Título del Tomo 1",
+          "resumen": "Resumen del contenido del tomo 1 del Manga 1"
+        },
+        {
+          "portada": "url_portada_tomo_2_manga_1",
+          "titulo": "Título del Tomo 2",
+          "resumen": "Resumen del contenido del tomo 2 del Manga 1"
+        }         
+      ]
+    },
+    {
+      "portada": "url_portada_manga_2",
+      "titulo": "Manga 2",
+      "autor": "Autor del Manga 2",
+      "sinopsis": "Breve descripción del Manga 2",
+      "tomos": [
+        {
+          "portada": "url_portada_tomo_1_manga_2",
+          "titulo": "Título del Tomo 1",
+          "resumen": "Resumen del contenido del tomo 1 del Manga 2"
+        },
+        {
+          "portada": "url_portada_tomo_2_manga_2",
+          "titulo": "Título del Tomo 2",
+          "resumen": "Resumen del contenido del tomo 2 del Manga 2"
+        }        
+      ]
+    }    
+  ]
+}

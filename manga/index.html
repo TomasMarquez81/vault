@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Mis Mangas</title>
+</head>
+
+<body>
+  <header>
+    <img src="img/header.jpg" alt="Título de la página">
+  </header>
+  <nav>
+    <!-- Aquí irá tu menú de búsqueda -->
+    <input type="text" id="searchInput" placeholder="Buscar manga...">
+    <button onclick="buscarManga()">Buscar</button>
+  </nav>
+  <main id="mangaList">
+    <!-- Aquí mostrarás los datos de los mangas desde el JSON -->
+  </main>
+
+  <!-- Modal para mostrar detalles del tomo -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modalTitle" src="" alt="Titulo">
+      <ol id="modalSummary" class="manga-list-tomo"></ol>
+    </div>
+  </div>
+
+  <!--  <div class="card">
+    <div class="wrapper">
+      <img src="https://assets.codepen.io/527512/zelda_cover-image.webp" class="cover-image" />
+    </div>
+    <img src="https://assets.codepen.io/527512/zelda_title.webp" class="title" />
+    <img src="https://assets.codepen.io/527512/zelda_character.webp" class="character" />
+  </div>-->
+
+
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

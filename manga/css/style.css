@@ -1,0 +1,241 @@
+/* style.css */
+body{
+  background-color: #686868;
+}
+
+header {
+  text-align: center; 
+}
+
+header img {
+  width: 100%;
+  /* La imagen ocupará el 100% del ancho del contenedor */
+  height: auto;
+  /* Mantendrá la proporción original de la imagen */
+  object-fit: cover;
+  /* La imagen cubrirá el contenedor sin deformarse */
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#searchInput {
+  padding: 5px;
+  margin-right: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#mangaList {  
+  display: grid;
+    grid-template-columns:
+      repeat(auto-fit,
+        minmax(250px, 1fr));
+  gap: 125px;
+  grid-auto-flow: row;
+  padding: 10px;  
+}
+
+.manga-card{  
+  position: relative;
+  transition: all .3s ease;
+  width: 250px;
+  margin: 0 auto;
+  &:hover{
+  transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+  .character-image{
+    opacity: 1;
+    transform: translateY(-5%);
+  }
+  .title-image{
+    transform: translateY(-5%) scale(1.2);
+  }
+  }
+  &::before{
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(0,0,0,0.5)50%,rgba(0,0,0)95%);
+    opacity: 0%;
+    transition: all .3s ease;
+  }
+  &:hover::before{
+    opacity: 1;
+  }
+}
+
+.cover-image{
+box-shadow: 0 60px 60px -60px rgba(0,30,255,0.5);
+border-radius: 4px;
+object-fit: cover;
+width: 100%;
+height: auto;
+}
+
+.title-modal-image{
+  width: 200px;    
+  margin: auto;
+}
+
+.title-image{
+  position: absolute;
+  width: 200px;
+  left: 0;
+  right: 0;
+  bottom: 0px;  
+  transition: .3s ease;
+  margin: auto;
+  cursor: pointer;
+}
+
+.character-image{
+  position: absolute;
+  width: 200px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(25%);
+  transition: .3s ease;
+  margin: auto;
+  opacity: 0;
+}
+
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;  
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+  
+/*
+.cover-image {
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrapper {
+  position: absolute;
+  transition: all 0.5s;  
+  width: 100%;
+  object-fit: cover;
+
+  z-index: -1;
+}
+
+.manga-card:hover { 
+ & .wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  }
+}
+
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+
+.wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(to top,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%);
+}
+
+.wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(to bottom,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%);
+}
+
+.manga-card:hover .wrapper::before,
+.wrapper::after {
+  opacity: 1;
+}
+
+.manga-card:hover .wrapper::after {
+  height: 120px;
+}
+
+.title {  
+  width: 100%;  
+  transition: transform 0.5s;
+  object-fit: cover;
+  position: absolute;
+  
+}
+
+.manga-card:hover .title {
+  transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+
+.manga-card:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
+*/
