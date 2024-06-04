@@ -1,0 +1,142 @@
+/* rock-salt-latin-400-normal */
+@font-face {
+    font-family: 'Rock Salt';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/rock-salt@latest/latin-400-normal.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* space-mono-latin-400-normal */
+@font-face {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/space-mono@latest/latin-400-normal.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root{
+    --bgcolor: #16121e;
+    --size: 600px;
+    --grid-color: #fff2;
+    --grid-size: 64px;
+    --grid-horizontal:repeating-linear-gradient(var(--grid-color) 0 1px, transparent 1px var(--grid-size));
+    --grid-vertical: repeating-linear-gradient(to right, var(--grid-color) 0 1px, transparent 1px var(--grid-size));
+    --hand-font: "Rock Salt", cursive;
+    --dev-font: "Space Mono", monospace;
+
+    background-color: var(--bgcolor);
+    background-image:
+        radial-gradient(circle, transparent, var(--bgcolor)),
+        var(--grid-horizontal),
+        var(--grid-vertical);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+
+
+.cover{
+    --noise:url("img/noise.webp");
+    --shine: linear-gradient(
+        130deg, transparent 80%, #5554 90%, transparent
+    );
+
+    width: var(--size);
+    aspect-ratio: 1;
+    background: #0c0c0c;
+    background-image: var(--shine), var(--noise);
+    background-blend-mode: soft-light;
+    background-size: cover, 200px;
+    box-shadow:
+        0 0 5px #0006 inset,
+        0 0 25px #000c,
+        0 0 40px #000c;
+    display: grid;
+    place-items: center;
+
+    & .triangle{
+        --triangle-size: calc(var(--size) * 0.63 );
+        --pink: #ff00c3;
+        --indigo: #8800ff;
+        --colors: var(--pink), var(--indigo);
+        --triangle-shape:polygon(100% 0, 0 0, 50% 100% );
+
+        width: var(--triangle-size);
+        height: calc(var(--triangle-size) * 0.8);
+        filter: drop-shadow(0 0 20px var(--pink));
+
+        &::before{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--colors));
+            clip-path: var(--triangle-shape);
+        }
+
+        &::after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            background-image: var(--noise);
+            background-blend-mode: soft-light;
+            position:absolute;
+            top: 0;
+            clip-path: var(--triangle-shape);
+            scale: 0.65;
+            translate: 0 -6%;
+            box-shadow: 
+                0 -5px 80px var(--pink) inset,
+                0 -25px 80px var(--pink) inset;
+        }
+    }
+}
+
+.cover-container{
+    width: var(--size);
+    height: var(--size);
+    position: relative;
+
+    &::after{
+        content: "";
+        background: url("img/plastic.webp") ;
+        background-size: cover;
+        mix-blend-mode: exclusion;
+        position: absolute;
+        top: -3%;
+        width: 104%;
+        height: 105%;
+        opacity: 50%;
+        pointer-events: none;
+    }
+}
+
+.title{
+    position: absolute;
+    font-family: var(--hand-font);
+    font-size: 5rem;
+    color: #fff;
+    text-shadow:
+    0 0 10px #fffc,
+    0 0 25px #fff8;
+    rotate: -6deg;
+}
+
+.subtitle{
+    position: absolute;
+    font-family: var(--dev-font);
+        font-size: 1rem;
+        bottom: 4rem;
+        color: #fff;
+        text-shadow:
+            0 0 10px #fffc,
+            0 0 25px #fff8;
+        rotate: 6deg;
+}
