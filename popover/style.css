@@ -1,0 +1,54 @@
+body{
+    display: grid;
+    place-items: center;
+    height: 100dvh;
+    background-color: #1b1b1b;
+}
+
+button{
+    padding: 10px 50px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: rgb(10, 129, 221);
+    color: #fff;
+    font-size: 20px;
+    transition-duration: 0.5s;
+    &:hover,
+    &:focus{
+        background-color: rgb(0, 208, 255);
+        color: #000;
+        border: 2px solid rgb(10, 129, 221);
+    }
+}
+
+[popover]{
+    display: grid;
+    place-items: center;
+    width: 25dvw;
+    border: 2px solid#fff;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: rgb(10, 129, 221);
+    color: #fff;
+    transition: translate 0.7s ease-in-out,
+        display 0.7s ease-in-out allow-discrete;
+    translate:  0 -100dvh;
+    & img{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+[popover]:popover-open{
+    translate: 0 -5dvh;
+}
+
+[popover]::backdrop{
+    background-color: rgba(71, 71, 71, 0.288);
+}
+
+@starting-style{
+    [popover]:popover-open {
+            translate: 0 -100dvh;
+        }
+}

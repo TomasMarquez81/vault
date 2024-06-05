@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Popover API</title>
+</head>
+
+<body>
+    <button popovertarget="popoverdiv">Dale</button>
+    <!-- Se puede poner manual dandole el atributo manual al popover que hace que tengas que dar al boton para cerrarlo o crear tu propio boton para cerrarlo, por defecto esta en auto y se cierra dando fuera o pulsando el boton-->
+    <div id="popoverdiv" popover="manual">
+        <h1>Hola que tal</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur consequatur nisi facilis. Pariatur quaerat
+            quos quo sint hic, ex ratione! Reprehenderit vel impedit totam, iste quaerat exercitationem accusamus
+            praesentium commodi!</p>
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmV2ZXE5MTJ0bGc1Nm4xamszeWdzNWRtZ3Ixc2l3bTNheHpiZTc2bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iYVneIXJQ3jdJLkZmM/giphy.webp"
+            alt="Grogu">
+
+        <button popovertarget="popoverdiv" popover-action="hide">Cerrar</button>
+    </div>
+</body>
+
+</html>
