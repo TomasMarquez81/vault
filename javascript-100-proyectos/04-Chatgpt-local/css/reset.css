@@ -1,0 +1,64 @@
+/* CSS RESET June 2024 */
+
+/* Establece el margen y el relleno de todos los elementos en 0 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Aplica el modelo de caja de borde (border-box) a todos los elementos y sus pseudo-elementos ::before y ::after */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Asegura que el cuerpo del documento tenga una altura mínima del 100% de la altura visible del dispositivo */
+body {
+    min-height: 100dvh;
+}
+
+/* Hereda la fuente del documento principal para estos elementos de formulario */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Aplica un ajuste de texto más amigable para párrafos */
+p {
+    text-wrap: pretty;
+}
+
+/* Ajusta el texto de los encabezados para que se distribuyan de manera equilibrada */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/* Hace que las imágenes, videos y SVGs sean responsivos, ajustando su tamaño máximo al 100% del contenedor */
+img,
+video,
+svg {
+    height: auto;
+    max-width: 100%;
+}
+
+/* Si el usuario prefiere reducir las animaciones (configuración del sistema), minimiza la duración y el número de iteraciones de las animaciones y transiciones */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto;
+        transition: none;
+    }
+}
